@@ -1,1 +1,47 @@
 
+import React, { useState } from 'react';
+
+function App() {
+  const [district, setDistrict] = useState("Patna");
+  const [problem, setProblem] = useState("");
+
+  const biharDistricts = [
+    "Araria", "Arwal", "Aurangabad", "Banka", "Begusarai", "Bhagalpur", "Bhojpur", 
+    "Buxar", "Darbhanga", "East Champaran", "Gaya", "Gopalganj", "Jamui", "Jehanabad", 
+    "Kaimur", "Katihar", "Khagaria", "Kishanganj", "Lakhisarai", "Madhepura", "Madhubani", 
+    "Munger", "Muzaffarpur", "Nalanda", "Nawada", "Patna", "Purnia", "Rohtas", "Saharsa", 
+    "Samastipur", "Saran", "Sheikhpura", "Sheohar", "Sitamarhi", "Siwan", "Supaul", 
+    "Vaishali", "West Champaran"
+  ];
+
+  const submitComplaint = () => {
+    alert(`${district} me shikayat mil gayi: ${problem}`);
+    setProblem("");
+  }
+
+  return (
+    <div style={{padding: 20, textAlign: 'center'}}>
+      <h1>NAYA BIHAR</h1>
+      <h3>Apni Shikayat Darj Karein</h3>
+
+      <p>Jila Chunein:</p>
+      <select value={district} onChange={(e)=>setDistrict(e.target.value)}>
+        {biharDistricts.map(d => <option key={d}>{d}</option>)}
+      </select>
+
+      <br/><br/>
+      <textarea 
+        placeholder="Apni samasya likhein..." 
+        value={problem} 
+        onChange={(e)=>setProblem(e.target.value)}
+        rows="4"
+        cols="30"
+      />
+
+      <br/><br/>
+      <button onClick={submitComplaint}>Shikayat Bhejein</button>
+    </div>
+  );
+}
+
+export default App;
