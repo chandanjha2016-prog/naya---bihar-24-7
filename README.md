@@ -10,7 +10,8 @@ Ye ek Citizen Grievance Platform hai jiska maksad Bihar ke 38 jila ki samasya ko
 - Status Track Karna
 
 ### BANAYA HAI
-**Prime Master** 
+**Chandan Kumar**
+Founder - NAYA BIHAR
 Mission: Pehle Bihar, Phir Hindustan
 
 ### DISCLAIMER
