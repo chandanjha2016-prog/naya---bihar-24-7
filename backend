@@ -1,1 +1,14 @@
 
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+let complaints = []; // Database baad me lagayenge
+
+app.post('/complaint', (req, res) => {
+  const { district, problem } = req.body;
+  complaints.push({ district, problem, date: new Date() });
+  res.json({ message: `${district} me shikayat mil gayi` });
+});
+
+app.listen(5000, ()=> console.log("Server chal raha hai 5000 pe"));
